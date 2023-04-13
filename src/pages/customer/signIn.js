@@ -55,7 +55,7 @@ function SignIn({ alertSnackbar, setSignIn }) {
             })
                 .then((res) => {
                     localStorage.setItem("auth_token", res.data.token);
-                    setSignIn(true, res.data.userType, res.data._id, res.data.toke);
+                    setSignIn(true, res.data.userType, res.data._id, res.data.token);
                     alertSnackbar("success", res.data.msg, true);
                     navigate("/");
                 })
